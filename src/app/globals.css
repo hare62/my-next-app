@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  @font-face {
+    font-family: 'NEXT BOOK';
+    src: url('/public/NEXT-Book-Bold') format('NEXT BOOK')
+  }
+  .tile {
+    @apply h-13 w-250 bg-tile mb-3 rounded-2xl relative flex
+  }
+  .normal{
+    @apply text-sm not-italic font-normal 
+  }
+  .bold{
+    @apply text-sm not-italic font-bold
+  }
+  .must {
+    border-radius: 0.75rem;
+    background: linear-gradient(180deg, #353535 0%, #2E2E2E 100%);
+  }
+
+  .f-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .round2 {
+    border-radius: 50%;
+    outline: 1px solid #5C5C5C;
+    border: 5px solid #010101;
+    background: #fff;
+  }
+  .round2circle{
+    position: absolute;
+    top:-11px;
+    right: -11px;
+  }
+  .imgborde{
+    border: 5px solid #101010;
+    border-radius: 50%;
+    outline: 1px solid #fff;
+  }
+  .round3 {
+    border-radius: 50%;
+    outline: 3px solid #5C5C5C;
+    border: 3px solid #101010;
+    background: #101010;
+    border-color: #ffffff transparent transparent transparent;
+    transform: rotate(40deg);
+  }
+  .round3Text{
+    transform: rotate(-40deg);
+  }
+  .roundInner3{
+    border-radius: 50%;
+    outline: 1px solid #5C5C5C;
+  }
+  .bottomLiner{
+    background: linear-gradient(180deg, rgba(16, 16, 16, 0.00) 0%, #101010 100%);
+  }
+}
